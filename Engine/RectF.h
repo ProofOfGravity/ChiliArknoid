@@ -14,7 +14,7 @@ public:
 	RectF(Vec2 top_left, float width, float height);
 
 	bool IsOverlappingWith(const RectF toCompare) const;
-	void Draw(Graphics& gfx, Color c);
+	RectF GetRect(Vec2 pos, float radius);
 
 
 public:

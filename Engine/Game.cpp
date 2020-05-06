@@ -25,6 +25,7 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd )
+ 
 {
 }
 
@@ -42,4 +43,7 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
+    
+   
+
 }

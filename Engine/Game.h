@@ -23,6 +23,8 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "Graphics.h"
+#include "RectF.h"
+#include "Vec2.h"
 
 class Game
 {
@@ -43,5 +45,6 @@ private:
    
 	/********************************/
 	/*  User Variables              */
+    
 	/********************************/
 };

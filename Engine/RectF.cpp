@@ -27,10 +27,11 @@ bool RectF::IsOverlappingWith(const RectF toCompare) const
 		&& left < toCompare.right && bottom > toCompare.top;
 }
 
-void RectF::Draw(Graphics& gfx, Color c)
+RectF RectF::GetRect(Vec2 pos, float radius)
 {
+	Vec2 temp{ radius, radius };
 
-	gfx.DrawRect(int(left), int(top), int(right), int(bottom), c);
-
-
+	return RectF(pos - temp, pos + temp);
 }
+
+
