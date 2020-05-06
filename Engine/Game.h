@@ -40,7 +40,7 @@ private:
 private:
 	MainWindow& wnd;
 	Graphics gfx;
-    static constexpr int balls = 20; 
+   
 	/********************************/
 	/*  User Variables              */
 	/********************************/
