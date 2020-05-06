@@ -1,5 +1,7 @@
 #pragma once
 #include "Vec2.h"
+#include "Graphics.h"
+#include "Colors.h"
 
 class RectF
 {
@@ -12,6 +14,7 @@ public:
 	RectF(Vec2 top_left, float width, float height);
 
 	bool IsOverlappingWith(const RectF toCompare) const;
+	void Draw(Graphics& gfx, Color c);
 
 
 public:
@@ -20,8 +23,6 @@ public:
 	float bottom;
 	float left;
 	float right;
-
-
 
 
 };

@@ -26,3 +26,11 @@ bool RectF::IsOverlappingWith(const RectF toCompare) const
 	return right > toCompare.left && top < toCompare.bottom
 		&& left < toCompare.right && bottom > toCompare.top;
 }
+
+void RectF::Draw(Graphics& gfx, Color c)
+{
+
+	gfx.DrawRect(int(left), int(top), int(right), int(bottom), c);
+
+
+}
