@@ -27,9 +27,9 @@ bool RectF::IsOverlappingWith(const RectF toCompare) const
 		&& left < toCompare.right && bottom > toCompare.top;
 }
 
-RectF RectF::GetRect(Vec2 pos, float radius)
+RectF RectF::GetRect(Vec2 pos, float halfHeight, float halfWidth)
 {
-	Vec2 temp{ radius, radius };
+	Vec2 temp{ halfWidth, halfHeight };
 
 	return RectF(pos - temp, pos + temp);
 }
