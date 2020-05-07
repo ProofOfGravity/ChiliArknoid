@@ -13,7 +13,7 @@ public:
 	RectF(Vec2 top_left, float width, float height);
 
 	bool IsOverlappingWith(const RectF toCompare) const;
-	RectF GetRect(Vec2 pos, float halfHeight, float halfWidth);
+	static RectF GetRect(Vec2 pos, float halfHeight, float halfWidth);
 
 
 public:

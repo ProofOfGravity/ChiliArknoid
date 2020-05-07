@@ -43,6 +43,7 @@ void Game::UpdateModel()
 
     float mark = ft.Mark();
     ball.UpdateBall(mark);
+
     
 }
 

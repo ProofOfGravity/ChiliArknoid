@@ -21,3 +21,18 @@ void Ball::UpdateBall(float dt)
 {
 	pos += vel * dt;
 }
+
+void Ball::Rebound_x()
+{
+	vel.x = -vel.x;
+}
+
+void Ball::Rebound_y()
+{
+	vel.y = -vel.y;
+}
+
+RectF Ball::GetBallRect()
+{
+	return RectF::GetRect(pos, radius, radius);
+}

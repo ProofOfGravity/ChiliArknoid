@@ -3,6 +3,7 @@
 #include "SpriteCodex.h"
 #include "Graphics.h"
 #include "FrameTimer.h"
+#include "RectF.h"
 
 class Ball
 {
@@ -15,6 +16,11 @@ public:
 
 	void DrawBall(Graphics& gfx);
 	void UpdateBall(float dt);
+
+	void Rebound_x();
+	void Rebound_y();
+
+	RectF GetBallRect();
 
 
 private:
