@@ -24,7 +24,8 @@
 Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
-	gfx( wnd )
+	gfx( wnd ),
+    rec(25.0f, 50.0f, 50.0f, 100.0f)
  
 {
 }
@@ -39,11 +40,15 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+
+    float mark = ft.Mark();
+    ball.UpdateBall(mark);
+    
 }
 
 void Game::ComposeFrame()
 {
     
-   
+    ball.DrawBall(gfx);
 
 }
