@@ -27,6 +27,7 @@
 #include "Vec2.h"
 #include "Ball.h"
 #include "FrameTimer.h"
+#include "Walls.h"
 
 class Game
 {
@@ -50,5 +51,6 @@ private:
     RectF rec;
     Ball ball;
     FrameTimer ft;
+    Walls walls;
 	/********************************/
 };
