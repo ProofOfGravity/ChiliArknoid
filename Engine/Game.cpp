@@ -44,6 +44,15 @@ void Game::UpdateModel()
     float mark = ft.Mark();
     ball.UpdateBall(mark);
 
+    if (walls.left.IsOverlappingWith(ball.GetBallRect()) || walls.right.IsOverlappingWith(ball.GetBallRect()))
+    {
+        ball.Rebound_x();
+    }
+
+    if (walls.top.IsOverlappingWith(ball.GetBallRect()) || walls.bottom.IsOverlappingWith(ball.GetBallRect()))
+    {
+        ball.Rebound_y();
+    }
     
 }
 

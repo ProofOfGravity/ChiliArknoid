@@ -26,8 +26,8 @@ public:
 private:
 
 	const float radius = 7.0f;
-	Vec2 pos = { 50, 50 };
-	Vec2 vel = { 25, 25 };
+	Vec2 pos = { 200, 350 };
+	Vec2 vel = { 50, 50 };
 
 
 

@@ -14,7 +14,7 @@ public:
 	void DrawWalls(Graphics& gfx);
 
 
-private:
+public:
 
 	RectF left{ 0.0f, float(Graphics::ScreenHeight), 100.0f, 120.0f };
 	RectF right{ 0.0f, float(Graphics::ScreenHeight), 650.0f, 670.0f };
