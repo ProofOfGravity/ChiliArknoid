@@ -61,5 +61,6 @@ void Game::ComposeFrame()
     
     ball.DrawBall(gfx);
     walls.DrawWalls(gfx);
+    paddle.DrawPaddle(gfx);
 
 }
