@@ -22,6 +22,8 @@ public:
 
 	RectF GetBallRect();
 
+	Vec2 GetBallPosition();
+
 
 private:
 

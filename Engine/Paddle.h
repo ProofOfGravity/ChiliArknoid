@@ -15,6 +15,9 @@ public:
 	void DrawPaddle(Graphics& gfx);
 	RectF GetPaddleRect();
 
+	float GetPaddleWidth();
+	Vec2 GetPaddlePosition();
+
 private:
 	 
 

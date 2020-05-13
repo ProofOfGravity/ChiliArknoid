@@ -54,5 +54,6 @@ private:
     FrameTimer ft;
     Walls walls;
     Paddle paddle;
+    
 	/********************************/
 };

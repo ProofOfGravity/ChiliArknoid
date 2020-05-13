@@ -36,3 +36,8 @@ RectF Ball::GetBallRect()
 {
 	return RectF::GetRect(pos, radius, radius);
 }
+
+Vec2 Ball::GetBallPosition()
+{
+	return pos;
+}

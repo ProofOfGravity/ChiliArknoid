@@ -43,6 +43,7 @@ void Game::UpdateModel()
 
     float mark = ft.Mark();
     ball.UpdateBall(mark);
+    float delta_loc = 0.0f;
 
     if (walls.left.IsOverlappingWith(ball.GetBallRect()) || walls.right.IsOverlappingWith(ball.GetBallRect()))
     {
@@ -53,6 +54,35 @@ void Game::UpdateModel()
     {
         ball.Rebound_y();
     }
+
+    if (wnd.kbd.KeyIsPressed(VK_LEFT))
+    {
+        if (!walls.left.IsOverlappingWith(paddle.GetPaddleRect()))
+        {
+            delta_loc = -100.0f;
+        }
+    }
+    if (wnd.kbd.KeyIsPressed(VK_RIGHT))
+    {
+        if (!walls.right.IsOverlappingWith(paddle.GetPaddleRect()))
+        {
+            delta_loc = 100.0f;
+        }
+    }
+
+    if (paddle.GetPaddleRect().IsOverlappingWith(ball.GetBallRect()))
+    {
+        if (ball.GetBallPosition().x < paddle.GetPaddlePosition().x + paddle.GetPaddleWidth() && ball.GetBallPosition().x > paddle.GetPaddlePosition().x)
+        {
+            ball.Rebound_y();
+        }
+        else
+        {
+            ball.Rebound_x();
+        }
+    }
+
+    paddle.UpdatePaddlePosition(delta_loc, mark);
     
 }
 

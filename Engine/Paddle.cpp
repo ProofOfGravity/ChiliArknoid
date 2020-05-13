@@ -2,19 +2,26 @@
 
 void Paddle::UpdatePaddlePosition(float poschange, float dt)
 {
-	if (position.x < 650 && position.x > 120)
-	{
-		position.x += poschange * dt;
-	}
+	position.x += poschange * dt;
 
 }
 
 void Paddle::DrawPaddle(Graphics& gfx)
 {
-	gfx.DrawRect(RectF::GetRect(position, height / 2, width / 2), mainPaddleColor);
+	gfx.DrawRect(RectF(position, width, height), mainPaddleColor);
 }
 
 RectF Paddle::GetPaddleRect()
 {
-	return RectF::GetRect(position, height / 2, width / 2);
+	return RectF(position, width, height);
+}
+
+float Paddle::GetPaddleWidth()
+{
+	return width;
+}
+
+Vec2 Paddle::GetPaddlePosition()
+{
+	return position;
 }
